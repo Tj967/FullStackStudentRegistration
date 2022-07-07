@@ -23,6 +23,9 @@ public class StudentController {
 	@Autowired 
 	IService service;
 	
+	//TODO: implement validation and exceptions
+	//also need to make nav-bar work so everything is not on one page
+	
 	@GetMapping(path="/students")
 	public List<Student> getAllStudents(){
 		System.out.println("Inside get all students");
