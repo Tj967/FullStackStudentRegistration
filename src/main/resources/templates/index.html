@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Students</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+		</script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="student_ajax.js"></script>
+	<style>
+		.jumbotron {
+			padding-top: 1rem;
+			border: 1px;
+			border-color: black;
+			border-style: solid;
+		}
+
+		.nav-item {
+			color: white;
+		}
+
+		h2.nav-item {
+			padding-right: 2rem;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+		<div class="navbar-nav">
+			<h2 class="nav-item">FullStack</h2>
+			<a class="nav-item nav-link active" id="displayHome">Home</a>
+		</div>
+		<form class="form-inline my-2 my-md-0">
+			<input class="form-control mr-md-2" type="search" id="searchContent" />
+			<button class="btn btn-info my-2 my-md-0" type=Submit id="findById">Search</button>
+		</form>
+
+	</nav>
+	<div class="row" id="currentContent">
+		<div class="col-lg-3 my-2 jumbotron">
+			<h2 style="text-align: center;">Student from Search</h2>
+			<div id="studentSearch"></div>
+		</div>
+		<div class="col-lg-3 my-2 jumbotron">
+			<h2 style="text-align: center;">All Students</h2>
+			<div class="text-center">
+				<button id="hideStudents">Hide list</button>
+			</div>
+			<div id="allStudents"></div>
+		</div>
+		<div class="col-lg-3 my-2 jumbotron">
+			<div>
+				<table border=1px class="table my-md-2">
+					<form method="post" id="newStudent">
+						<tr>
+							<th colspan="2">Registration Form</th>
+						</tr>
+						<tr>
+							<td>Enter name:</td>
+							<td><input type='text' name='name' id='studentName' value="" required /></td>
+						</tr>
+						<tr>
+							<td>Enter Age:</td>
+							<td><input type='number' name='age' id='studentAge' value="" required /></td>
+						</tr>
+						<tr>
+							<td>Enter Mobile Number: </td>
+							<td><input type='number' name='mobileNumber' id='studentMobileNumber' value="" required />
+							</td>
+						</tr>
+						<tr>
+							<td align="center"><button type=Submit class="btn btn-default">Submit</button></td>
+							<td align="center"><button type=Reset class="btn btn-default">Reset</button></td>
+						</tr>
+					</form>
+				</table>
+				<hr>
+				<div id="newStudents"></div>
+
+			</div>
+		</div>
+		<div class="col-lg-3 my-2 jumbotron" id="editStudentDiv">
+			<table border=1px class="table my-md-2">
+				<form id="editStudentForm">
+					<tr>
+						<th colspan="2" id="editID">Edit Student</th>
+						<td><input type='hidden' id='editStudentID' value="" required /></td>
+					</tr>
+					<tr>
+						<td>Enter name:</td>
+						<td><input type='text' name='name' id='editStudentName' required /></td>
+					</tr>
+					<tr>
+						<td>Enter Age:</td>
+						<td><input type='number' name='age' id='editStudentAge' required /></td>
+					</tr>
+					<tr>
+						<td>Enter Mobile Number: </td>
+						<td><input type='number' name='mobileNumber' id='editStudentMobileNumber' required />
+						</td>
+					</tr>
+					<tr>
+						<td align="center"><button type=Submit class="btn btn-default">Submit</button></td>
+						<td align="center"><button type=Reset class="btn btn-default">Reset</button></td>
+					</tr>
+				</form>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

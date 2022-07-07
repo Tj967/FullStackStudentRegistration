@@ -1,0 +1,36 @@
+<div class="col-md-3"></div>
+<div class="col-md-3 my-2 jumbotron">
+	<h2 style="text-align: center;"> All Students</h2>
+	<div class="text-center"><button id="hideStudents">Hide list</button></div>
+	<div id="allStudents"></div>
+</div>
+<div class="col-md-3">
+	<div>
+		<table border=1px class="table my-md-2">
+			<form method="post" id="newStudent">
+				<tr>
+					<th colspan="2">Registration Form</th>
+				</tr>
+				<tr>
+					<td>Enter name:</td>
+					<td><input type="text" name="name" id="studentName" value="" required /></td>
+				</tr>
+				<tr>
+					<td>Enter Age:</td>
+					<td><input type="number" name="age" id="studentAge" value="" required /></td>
+				</tr>
+				<tr>
+					<td>Enter Mobile Number: </td>
+					<td><input type="number" name="mobileNumber" id="studentMobileNumber" value="" required /></td>
+				</tr>
+				<tr>
+					<td align="center"><button type=Submit class="btn btn-default">Submit</button></td>
+					<td align="center"><button type=Reset class="btn btn-default">Reset</button></td>
+				</tr>
+			</form>
+		</table>
+		<hr>
+		<div id="newStudents"></div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
